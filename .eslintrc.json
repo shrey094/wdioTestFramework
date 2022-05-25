@@ -1,0 +1,48 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "jquery": true,
+    "phantomjs": true
+  },
+  "plugins": ["wdio", "prettier"],
+  "extends": ["airbnb-base", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "globals": {
+    "FastClick": true,
+    "_": true,
+    "dialog": true,
+    "driver": true,
+    "$": true,
+    "$$": true,
+    "browser": true,
+    "css": true
+  },
+  "root": true,
+  "rules": {
+    "prettier/prettier": "error",
+    "no-prototype-builtins": 0,
+    "no-case-declarations": 0,
+    "no-useless-escape": 0,
+    "no-param-reassign": 2,
+    "consistent-return": 1,
+    "new-cap": [2, { "newIsCap": true }],
+    "no-warning-comments": [0, { "terms": ["todo", "fixme", "xxx"], "location": "start" }],
+    "max-len": [
+      1,
+      220,
+      4,
+      {
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignorePattern": "^\\s*var\\s.+=\\s*require\\s*\\("
+      }
+    ]
+  }
+}
